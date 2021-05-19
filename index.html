@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <form class="container">
+    <div class="container" action="contador.html" id="principal">
         <h1>
             Contador
         </h1>
@@ -20,8 +20,41 @@
             Informe uma data
         </p>
         <input type="date" placeholder="DD/MM/AAAA" id="date">
-        <input type="submit" value="Iniciar Contagem" class="btn">
-    </form>
+        <input type="submit" value="Iniciar Contagem" class="btn" id="submit">
+    </div>
+    <div class="container contador-falta" id="secundario">
+        <div class="header">
+            <h1>
+                Contador
+            </h1>
+            <button class="btn" id="restart">
+                Reiniciar
+            </button>
+        </div>
+        <p class="faltam">
+            Faltam
+        </p>
+        <div class="counter">
+            <div class="counter-container">
+                <div id="counter-day">
+                    <span>--</span>
+                    <p>Dias</p>
+                </div>
+                <div id="counter-hour">
+                    <span>--</span>
+                    <p>Minutos</p>
+                </div>
+                <div id="counter-minute">
+                    <span>--</span>
+                    <p>Minutos</p>
+                </div>
+                <div id="counter-seconds">
+                    <span>--</span>
+                    <p>Segundos</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
