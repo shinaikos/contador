@@ -67,6 +67,7 @@ function dateMin() {
     let day = date.getDate();
 
     let setDate = document.querySelector("input");
+    setDate.setAttribute("value", `${ano}-0${month+1}-${day+1}`)
     setDate.setAttribute("min", `${ano}-0${month+1}-${day+1}`);
 }
 dateMin();
