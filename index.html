@@ -19,15 +19,15 @@
         <p>
             Informe uma data
         </p>
-        <input type="date" placeholder="DD/MM/AAAA" id="date">
-        <input type="submit" value="Iniciar Contagem" class="btn" id="submit">
+        <input type="date" placeholder="DD/MM/AAAA" id="date" min="2021-05-22">
+        <input type="submit" onclick="start()" value="Iniciar Contagem" class="btn" id="submit">
     </div>
     <div class="container contador-falta" id="secundario">
         <div class="header">
             <h1>
                 Contador
             </h1>
-            <button class="btn" id="restart">
+            <button class="btn" id="restart" onclick="restart()">
                 Reiniciar
             </button>
         </div>
@@ -42,13 +42,13 @@
                 </div>
                 <div id="counter-hour">
                     <span>--</span>
-                    <p>Minutos</p>
+                    <p>Horas</p>
                 </div>
                 <div id="counter-minute">
                     <span>--</span>
                     <p>Minutos</p>
                 </div>
-                <div id="counter-seconds">
+                <div id="counter-second">
                     <span>--</span>
                     <p>Segundos</p>
                 </div>
