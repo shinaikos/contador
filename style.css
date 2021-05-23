@@ -106,3 +106,20 @@ p {
     color: var(--bg-button);
     font-size: 1.5rem;
 }
+
+@media(max-width:760px) {
+    .header {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .counter-container {
+        flex-direction: column;
+        justify-content: center;
+        min-width: 300px;
+    }
+    .counter-container div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
