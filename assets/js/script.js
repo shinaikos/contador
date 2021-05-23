@@ -1,5 +1,17 @@
 const selector = select => document.querySelector(select);
 
+function start() {
+    getTargetDate();
+    transform();
+}
+let startCount;
+
+function restart() {
+    dateMin();
+};
+
+let stopCount;
+
 selector("#submit").addEventListener("click", () => {
     const primary = selector("#principal");
     const secondary = selector("#secundario");
@@ -7,6 +19,7 @@ selector("#submit").addEventListener("click", () => {
         primary.style.display = "none";
         secondary.style.display = "flex"
     }
+    startCount = setInterval(start, 1000);
 });
 selector("#restart").addEventListener("click", () => {
     const primary = selector("#secundario");
@@ -15,6 +28,8 @@ selector("#restart").addEventListener("click", () => {
         primary.style.display = "none";
         secondary.style.display = "flex"
     }
+    restart();
+    clearInterval(startCount);
 });
 
 function insertData(day, hour, minute, second) {
@@ -48,16 +63,6 @@ function transform() {
     seconds = parseInt(seconds)
 
     insertData(dias, hours, minutes, seconds)
-}
-
-function start() {
-    getTargetDate();
-    setInterval(transform, 1000)
-}
-
-function restart() {
-    setTimeout(transform)
-    dateMin()
 }
 
 function dateMin() {
